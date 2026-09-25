@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JODI</title>
+  <meta name="description" content="El cruce de dos mundos. Navegá, mirá, observá, elegí y construí." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,620&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root { --bg:#12110e; --surface:#1c1a16; --fg:#efe8dc; --muted:#b7aea0; --accent:#d06a32; --accent-fg:#1c100a; --line:#3a342c; }
+    * { box-sizing: border-box; }
+    html { -webkit-font-smoothing: antialiased; }
+    body { margin:0; background:var(--bg); color:var(--fg); font-family:Outfit,system-ui,sans-serif; overflow-x:hidden; }
+    h1,h2,h3 { font-family:Fraunces,Georgia,serif; text-wrap:balance; font-weight:500; }
+    a { color:inherit; text-decoration:none; }
+    button,[role=button] { cursor:pointer; font:inherit; }
+    button:disabled { opacity:.4; cursor:default; }
+    :focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+    .wrap { max-width:36rem; margin:0 auto; padding:2rem 1.25rem 4rem; }
+    header { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:2.5rem; }
+    .kicker { font-size:.75rem; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); }
+    h1 { font-size:3.75rem; margin:0; letter-spacing:-.03em; }
+    .lead { font-size:1.125rem; color:var(--muted); margin:.75rem 0 0; max-width:24rem; }
+    .sub { font-size:.9rem; color:var(--muted); margin:.5rem 0 0; max-width:24rem; }
+    .order { margin-top:2rem; border-top:1px solid var(--line); padding-top:1rem; }
+    .order ol { margin:.5rem 0 0; padding:0; list-style:none; }
+    .order li { display:flex; gap:.75rem; min-height:2.5rem; align-items:baseline; border-bottom:1px solid var(--line); padding:.6rem 0; }
+    .order .n { width:1.5rem; font-size:.75rem; color:var(--muted); font-variant-numeric:tabular-nums; }
+    .order b { font-family:Fraunces,Georgia,serif; font-weight:500; }
+    .order span { color:var(--muted); font-size:.9rem; }
+    .nav3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:.5rem; margin-top:.75rem; }
+    .nav3 button,.ghost { min-height:2.75rem; border-radius:.75rem; border:1px solid var(--line); background:var(--surface); color:var(--fg); padding:0 1rem; }
+    .nav3 button.on { background:var(--accent); color:var(--accent-fg); border-color:var(--accent); }
+    .accent { background:var(--accent); color:var(--accent-fg); border:0; min-height:2.75rem; border-radius:.75rem; padding:0 1rem; }
+    .row { display:flex; justify-content:space-between; align-items:baseline; gap:1rem; margin-top:2.5rem; }
+    label { display:block; margin-top:1rem; }
+    label span { display:block; font-size:.75rem; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); margin-bottom:.5rem; }
+    input,select,textarea { width:100%; background:var(--bg); color:var(--fg); border:1px solid var(--line); border-radius:.75rem; padding:.75rem; font:inherit; }
+    textarea { min-height:7rem; resize:vertical; }
+    .card { border:1px solid var(--line); background:var(--surface); padding:1rem; margin-top:2rem; }
+    .item { border-top:1px solid var(--line); }
+    .item > button.line { width:100%; text-align:left; background:none; border:0; color:inherit; min-height:3.5rem; padding:.75rem 0; display:flex; justify-content:space-between; gap:1rem; }
+    .item h3 { margin:0; font-size:1.25rem; }
+    .item p { margin:.35rem 0 0; color:var(--muted); }
+    .muted { color:var(--muted); font-size:.9rem; }
+    .tiny { font-size:.75rem; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); }
+    .tiny.acc { color:var(--accent); }
+    .studio a { display:flex; justify-content:space-between; min-height:3.5rem; align-items:center; border-top:1px solid var(--line); }
+    .hidden { display:none; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header><p class="kicker">JODI</p><p class="kicker">entretenimiento</p></header>
+    <h1>JODI</h1>
+    <p class="lead">El cruce de dos mundos.</p>
+    <p class="sub">Solo web. Navegá, mirá, observá, elegí y construí.</p>
+    <section class="order" aria-label="Orden">
+      <p class="tiny">Orden</p>
+      <ol>
+        <li><span class="n">01</span><div><b>BIOS</b> — <span>arranque del mundo</span></div></li>
+        <li><span class="n">02</span><div><b>Mundos</b> — <span>Josua · Diego · Cruce</span></div></li>
+        <li><span class="n">03</span><div><b>Planos</b> — <span>Atlas · GEN · Caster X · Símbolos · Música</span></div></li>
+        <li><span class="n">04</span><div><b>Lenguajes</b> — <span>rumbo, raíz, corte, glifo, sonido</span></div></li>
+        <li><span class="n">05</span><div><b>Base</b> — <span>experiencias compartidas</span></div></li>
+        <li><span class="n">06</span><div><b>SOPEC</b> — <span>situar, ordenar, cortar, entregar, cerrar</span></div></li>
+        <li><span class="n">07</span><div><b>Beta</b> — <span>este lugar</span></div></li>
+      </ol>
+    </section>
+    <article id="living" class="card hidden"></article>
+    <p class="tiny" style="margin-top:2.5rem">Navegar</p>
+    <div class="nav3">
+      <button type="button" id="b-todos" class="on">Cruce</button>
+      <button type="button" id="b-josua">Josua</button>
+      <button type="button" id="b-diego">Diego</button>
+    </div>
+    <div class="row"><h2 class="tiny">Ver</h2><button type="button" class="ghost" id="toggle-build">Construir</button></div>
+    <p id="empty" class="muted"></p>
+    <ul id="list" style="list-style:none;padding:0;margin:0"></ul>
+    <form id="form" class="hidden">
+      <p class="tiny" style="margin-top:2rem">Construir</p>
+      <label><span>Mundo</span>
+        <select id="world">
+          <option value="cruce">Cruce</option>
+          <option value="josua">Josua</option>
+          <option value="diego">Diego</option>
+        </select>
+      </label>
+      <label><span>Experiencia</span><input id="title" maxlength="80" autocomplete="off" placeholder="Cómo se llama" /></label>
+      <label><span>Qué se vive</span><textarea id="body" maxlength="600" placeholder="Lo que la gente va a ver y elegir"></textarea></label>
+      <p class="muted">Entra a la base de este navegador. Sin nombre.</p>
+      <button class="accent" type="submit" id="save" disabled>Dejar en la base</button>
+    </form>
+    <nav id="studio" class="studio hidden" aria-label="Estudio">
+      <h2 class="tiny" style="margin-top:3rem">Estudio — planos de Josua</h2>
+      <a href="#atlas"><span>Atlas</span><span class="muted">explorar</span></a>
+      <a href="#gen"><span>GEN</span><span class="muted">raíz</span></a>
+      <a href="#caster"><span>Caster X</span><span class="muted">ejecutar</span></a>
+      <a href="#simbolos"><span>Símbolos</span><span class="muted">lenguaje</span></a>
+      <a href="#musica"><span>Música</span><span class="muted">sonido</span></a>
+    </nav>
+    <section id="atlas" style="margin-top:3rem"><p class="tiny acc">01</p><h2>Atlas</h2><p class="muted">Explorar. El plano del rumbo.</p></section>
+    <section id="gen" style="margin-top:2rem"><p class="tiny acc">02</p><h2>GEN</h2><p class="muted">Comprender la raíz.</p></section>
+    <section id="caster" style="margin-top:2rem"><p class="tiny acc">03</p><h2>Caster X</h2><p class="muted">Crear y ejecutar. Un corte a la vez.</p></section>
+    <section id="simbolos" style="margin-top:2rem"><p class="tiny acc">04</p><h2>Símbolos</h2><p class="muted">Lenguaje personal. Mapa, no destino.</p></section>
+    <section id="musica" style="margin-top:2rem"><p class="tiny acc">05</p><h2>Música</h2><p class="muted">Transformar lo vivido en sonido.</p></section>
+  </div>
+  <script>
+    const KEY="jodi-web";
+    const LABEL={josua:"Josua",diego:"Diego",cruce:"Cruce"};
+    let shore="todos", openId=null, chosen=null, rows=[];
+    try { rows=JSON.parse(localStorage.getItem(KEY)||"[]"); } catch { rows=[]; }
+    const $=id=>document.getElementById(id);
+    const form=$("form"), list=$("list"), empty=$("empty"), living=$("living"), studio=$("studio");
+    const title=$("title"), body=$("body"), world=$("world"), save=$("save");
+    function persist(){ localStorage.setItem(KEY, JSON.stringify(rows)); }
+    function visible(){ return rows.filter(r=>shore==="todos"||r.world===shore); }
+    function readySave(){ save.disabled=!(title.value.trim()&&body.value.trim()); }
+    title.addEventListener("input", readySave);
+    body.addEventListener("input", readySave);
+    $("toggle-build").onclick=()=>form.classList.toggle("hidden");
+    ["todos","josua","diego"].forEach(id=>{
+      $("b-"+id).onclick=()=>{
+        shore=id;
+        ["todos","josua","diego"].forEach(x=>$("b-"+x).classList.toggle("on", x===id));
+        if(id!=="todos") world.value=id;
+        studio.classList.toggle("hidden", id!=="josua");
+        render();
+      };
+    });
+    form.addEventListener("submit", e=>{
+      e.preventDefault();
+      const t=title.value.trim(), b=body.value.trim();
+      if(!t||!b) return;
+      const row={id:Date.now(), world:world.value, title:t, body:b, lived:0};
+      rows.unshift(row); persist();
+      title.value=""; body.value=""; readySave(); form.classList.add("hidden"); openId=row.id; render();
+    });
+    function render(){
+      const vis=visible();
+      empty.textContent=vis.length?"":(shore==="diego"?"El mundo de Diego todavía no tiene experiencias. Construí la primera.":shore==="josua"?"El mundo de Josua todavía no tiene experiencias en la base.":"Todavía no hay experiencias en el cruce. Construí la primera.");
+      if(!rows.length) form.classList.remove("hidden");
+      studio.classList.toggle("hidden", shore!=="josua");
+      list.innerHTML=vis.map(r=>{
+        const open=openId===r.id;
+        return `<li class="item"><button type="button" class="line" data-open="${r.id}"><span><h3>${escapeHtml(r.title)}</h3>${open?"":`<p>${escapeHtml(r.body)}</p>`}</span><span class="tiny">${LABEL[r.world]}</span></button>${open?`<div><p class="tiny acc">Observar</p><p class="muted">${escapeHtml(r.body)}</p><p style="margin-top:12px"><button type="button" class="accent" data-choose="${r.id}">Elegir</button>${r.lived?`<span class="muted"> elegida ${r.lived}</span>`:""}</p></div>`:""}</li>`;
+      }).join("");
+      list.querySelectorAll("[data-open]").forEach(btn=>{
+        btn.onclick=()=>{ const id=Number(btn.getAttribute("data-open")); openId=openId===id?null:id; render(); };
+      });
+      list.querySelectorAll("[data-choose]").forEach(btn=>{
+        btn.onclick=()=>{ const id=Number(btn.getAttribute("data-choose")); rows=rows.map(r=>r.id===id?{...r,lived:r.lived+1}:r); chosen=rows.find(r=>r.id===id)||null; persist(); render(); };
+      });
+      if(chosen){
+        living.classList.remove("hidden");
+        living.innerHTML=`<p class="tiny acc">Estás viviendo</p><h2 style="margin:.25rem 0 0">${escapeHtml(chosen.title)}</h2><p class="muted">${escapeHtml(chosen.body)}</p><p class="tiny" style="margin-top:12px">${LABEL[chosen.world]} · elegida ${chosen.lived}</p>`;
+      }
+    }
+    function escapeHtml(s){ return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c])); }
+    render();
+  </script>
+</body>
+</html>
